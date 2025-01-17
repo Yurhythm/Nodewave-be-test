@@ -37,7 +37,7 @@ export async function importProduct(url: string): Promise<ServiceResponse<{}>> {
         return {
             status: true,
             data: {
-                processId : processId
+                processId: processId
             }
         }
     } catch (err) {
@@ -99,9 +99,9 @@ export async function getImportStatus(processId: string): Promise<ServiceRespons
         if (file) {
             return {
                 status: true,
-                data: { 
-                    percentage : file.status? 100 : 0,
-                    status: file.status 
+                data: {
+                    percentage: file.status ? 100 : 0,
+                    status: file.status
                 }
             }
         } else {
@@ -117,5 +117,56 @@ export async function getImportStatus(processId: string): Promise<ServiceRespons
     } catch (err) {
         Logger.error(`ProductService.getImportStatus : ${err}`)
         return INTERNAL_SERVER_ERROR_SERVICE_RESPONSE
+    }
+}
+
+// get all data filterable and paginate
+interface ProductFilterOptions {
+    filter: string;
+    page: number;
+    pageSize: number;
+    sort: "asc" | "desc";
+}
+
+export async function getDataProduct({ filter, page, pageSize, sort }: ProductFilterOptions): Promise<ServiceResponse<{}>> {
+    try {
+        const skip = (page - 1) * pageSize;
+        const take = pageSize;
+
+        const products = await prisma.product.findMany({
+            where: {
+                productName: {
+                    contains: filter,
+                },
+            },
+            orderBy: {
+                code: sort,
+            },
+            skip,
+            take,
+        });
+
+        const totalProducts = await prisma.product.count({
+            where: {
+                productName: {
+                    contains: filter,
+                },
+            },
+        });
+
+        return {
+            status: true,
+            data: {
+                products,
+                pagination: {
+                    page,
+                    pageSize,
+                    total: totalProducts,
+                },
+            },
+        };
+    } catch (err) {
+        Logger.error(`ProductService.getDataProduct: ${err}`);
+        return INTERNAL_SERVER_ERROR_SERVICE_RESPONSE;
     }
 }

@@ -1,0 +1,26 @@
+Code,Product Name,Category,Price, Stock,Description
+P001, Smartphone A1, Elektronik,3500000,50, Smartphone dengan layar 6.5 inci dan RAM 4GB.
+P002, Laptop X1, Elektronik,7500000,30, Laptop ringan dengan prosesor Intel Core i5.
+P003," TV LED 32""", Elektronik,2500000,20, TV LED beresolusi HD untuk pengalaman menonton nyaman.
+P004, Kulkas 2 Pintu, Elektronik,4000000,15, Kulkas hemat energi dengan kapasitas besar.
+P005, Mesin Cuci Front Load, Elektronik,3200000,25, Mesin cuci otomatis dengan kapasitas 7kg.
+P006, Blender Turbo, Peralatan Dapur,500000,40, Blender multifungsi untuk membuat jus dan smoothies.
+P007, Setrika Uap, Peralatan Rumah Tangga,300000,70, Setrika uap dengan pengaturan suhu otomatis.
+P008, Sofa Minimalis, Furnitur,2500000,10, Sofa nyaman dengan desain modern minimalis.
+P009, Meja Kerja Kayu, Furnitur,1500000,20, Meja kerja elegan berbahan kayu solid.
+P010, Sepatu Olahraga Lari, Fashion,650000,60, Sepatu olahraga ringan dan nyaman untuk lari.
+P011, Jam Tangan Digital, Fashion,200000,50, Jam tangan digital dengan fitur stopwatch dan alarm.
+P012, Jaket Kulit, Fashion,1200000,15, Jaket kulit premium untuk tampilan stylish.
+P013," Buku ""Belajar Python""", Buku,150000,100, Buku panduan lengkap belajar bahasa pemrograman Python.
+P014," Novel ""Hujan""", Buku,95000,80, Novel populer karya Tere Liye.
+P015," Komik ""One Piece""", Buku,20000,120, Komik Jepang populer tentang petualangan bajak laut.
+P016, Bola Sepak, Olahraga,250000,40, Bola sepak standar FIFA untuk pertandingan profesional.
+P017, Raket Badminton, Olahraga,350000,30, Raket ringan untuk bermain badminton.
+P018, Helm Sepeda, Olahraga,300000,25, Helm pelindung untuk aktivitas bersepeda.
+P019, Panci Presto, Peralatan Dapur,800000,15, Panci presto tahan tekanan tinggi untuk memasak cepat.
+P020, Gitar Akustik, Musik,1000000,10, Gitar akustik dengan suara jernih dan desain klasik.
+P021, Keyboard Gaming, Elektronik,550000,50, Keyboard mekanik dengan lampu RGB.
+P022, Earphone Wireless, Elektronik,300000,60, Earphone nirkabel dengan koneksi Bluetooth 5.0.
+P023, Kursi Gaming, Furnitur,2500000,20, Kursi ergonomis untuk kenyamanan saat bermain game.
+P024, Mouse Wireless, Elektronik,150000,80, Mouse nirkabel dengan sensor optik presisi tinggi.
+P025, Smartwatch Pro, Elektronik,1200000,30, Smartwatch dengan fitur kesehatan dan notifikasi.

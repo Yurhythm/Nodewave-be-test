@@ -3,7 +3,6 @@ import Logger from '$pkg/logger';
 import bcrypt from 'bcrypt';
 import { prisma } from '$utils/prisma.utils';
 import jwt from 'jsonwebtoken';
-require('dotenv').config();
 
 interface AuthenticateData {
     email: string;

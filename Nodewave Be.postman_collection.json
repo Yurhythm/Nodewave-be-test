@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "7718f911-0896-47e8-8930-f8672306dbbe",
+		"name": "Nodewave Be",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34566317",
+		"_collection_link": "https://luisoft-team.postman.co/workspace/LuisSoft~7a2b6e9a-3013-466f-87ce-bd19efe91397/collection/34566317-7718f911-0896-47e8-8930-f8672306dbbe?action=share&source=collection_link&creator=34566317"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n                    {\n                        \"email\": \"admin@test.com\",\n                        \"password\": \"admin123\"\n                    }\n                    "
+				},
+				"url": {
+					"raw": "http://localhost:3150/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3150",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n                    {\n                        \"email\": \"admin@test.com\",\n                        \"password\": \"admin123\"\n                    }\n                    "
+						},
+						"url": {
+							"raw": "http://localhost:3150/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3150",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\n                    {\n                        \"content\": {\n                            \"user\": {\n                                \"id\": 1,\n                                \"fullName\": \"Admin\",\n                                \"password\": \"$2b$12$D1nB45nrsgcJzRgCiZjzNOx6XWhH8OOk/xTsFpuGM2QYfkWtc0sG6\",\n                                \"email\": \"admin@test.com\",\n                                \"role\": \"ADMIN\",\n                                \"createdAt\": \"2025-01-17T07:27:00.705Z\",\n                                \"updatedAt\": \"2025-01-17T07:27:00.705Z\"\n                            },\n                            \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\n                        },\n                        \"message\": \"Success!\",\n                        \"errors\": []\n                    }\n                    "
+				}
+			]
+		},
+		{
+			"name": "Import Product Using CSV File",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n                    {\n                        \"fileUrl\": \"https://moezzadev.my.id/Products.csv\"\n                    }\n                    "
+				},
+				"url": {
+					"raw": "http://localhost:3150/product/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3150",
+					"path": [
+						"product",
+						"import"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n                    {\n                        \"fileUrl\": \"https://moezzadev.my.id/Products.csv\"\n                    }\n                    "
+						},
+						"url": {
+							"raw": "http://localhost:3150/product/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3150",
+							"path": [
+								"product",
+								"import"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\n                    {\n                        \"content\": {\n                            \"processId\": \"file_1737121635069\"\n                        },\n                        \"message\": \"Success!\",\n                        \"errors\": []\n                    }\n                    "
+				}
+			]
+		},
+		{
+			"name": "Get Import Product Background Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3150/product/upload-status/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3150",
+					"path": [
+						"product",
+						"upload-status",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3150/product/upload-status/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3150",
+							"path": [
+								"product",
+								"upload-status",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\n                    {\n                        \"content\": {\n                            \"percentage\": 100,\n                            \"status\": \"success\"\n                        },\n                        \"message\": \"Success!\",\n                        \"errors\": []\n                    }\n                    "
+				}
+			]
+		},
+		{
+			"name": "Get All Product filterable and pagianateable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3150/product?filter=&page=1&pageSize=10&sort=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3150",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": ""
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3150/product?filter=&page=1&pageSize=10&sort=asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3150",
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\n                    {\n                        \"content\": {\n                            \"percentage\": 100,\n                            \"status\": \"success\"\n                        },\n                        \"message\": \"Success!\",\n                        \"errors\": []\n                    }\n                    "
+				}
+			]
+		}
+	]
+}
